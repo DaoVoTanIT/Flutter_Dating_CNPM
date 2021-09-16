@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dating_cdcnpm/features/home/ui/page/home.dart';
 import 'package:flutter_dating_cdcnpm/features/signin/ui/page/signin.dart';
 import 'package:flutter_dating_cdcnpm/features/splash/ui/page/splash.dart';
 
@@ -9,6 +10,8 @@ class Routers {
         return MaterialPageRoute(builder: (context) => SplashPage());
       case 'LoginPage':
         return MaterialPageRoute(builder: (context) => SignInPage());
+      case 'HomePage':
+        return MaterialPageRoute(builder: (context) => HomePage());
 
       default:
         {
