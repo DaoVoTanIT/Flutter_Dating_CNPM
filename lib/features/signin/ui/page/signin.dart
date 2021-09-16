@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
+import 'package:flutter_dating_cdcnpm/features/home/ui/widget/matchWidget.dart';
+import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -12,7 +15,19 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Sign In'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Sign In'),
+            OutlinedButton(
+              //style: outlineButtonStyle,
+              onPressed: () {
+                Navigator.pushNamed(context, RouteName.homePage);
+              },
+              child: Text('Looks like an OutlineButton'),
+            )
+          ],
+        ),
       ),
     );
   }
