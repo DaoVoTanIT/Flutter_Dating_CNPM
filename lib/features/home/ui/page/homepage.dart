@@ -1,9 +1,13 @@
+import 'dart:ui';
+
+import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_cdcnpm/features/home/model/userInfor.dart';
 import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/provider/feedback_position_provider.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/tabBar.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/userCard.dart';
+import 'package:flutter_dating_cdcnpm/theme/color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
@@ -17,12 +21,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text(
-            'Tinder like CARDS',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+            elevation: 0.0,
+            leading: Image.asset(
+              'assets/images/splash.png',
+            ),
+            backgroundColor: Colors.white,
+            title: GradientText(
+              text: 'DatingApp',
+              colors: <Color>[Colors.redAccent, Colors.purpleAccent],
+              style: TextStyle(fontSize: 30.0),
+            )),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
