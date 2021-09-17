@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_cdcnpm/features/home/ui/page/home.dart';
+import 'package:flutter_dating_cdcnpm/features/home/ui/page/homepage.dart';
 import 'package:flutter_dating_cdcnpm/features/signin/ui/page/signin.dart';
 import 'package:flutter_dating_cdcnpm/features/splash/ui/page/splash.dart';
 
