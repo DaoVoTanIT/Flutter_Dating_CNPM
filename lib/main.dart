@@ -3,6 +3,7 @@ import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
 import 'package:flutter_dating_cdcnpm/routes/router.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       //set up router
 
-      initialRoute: RouteName.splashPage,
+      initialRoute: RouteName.homePage,
       onGenerateRoute: Routers.generateRoute,
     );
   }

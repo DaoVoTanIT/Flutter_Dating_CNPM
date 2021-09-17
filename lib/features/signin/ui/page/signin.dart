@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
-import 'package:flutter_dating_cdcnpm/features/home/ui/widget/matchWidget.dart';
 import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
 
 class SignInPage extends StatefulWidget {
