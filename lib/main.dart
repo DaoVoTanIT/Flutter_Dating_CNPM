@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       //set up router
 
-      initialRoute: RouteName.homePage,
+      initialRoute: RouteName.splashPage,
       onGenerateRoute: Routers.generateRoute,
     );
   }
