@@ -4,7 +4,6 @@ import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/provider/feedback_position_provider.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/tabBar.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/userCard.dart';
-import 'package:flutter_tindercard/flutter_tindercard.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
@@ -15,7 +14,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<User> users = dummyUsers;
-  CardController? controller;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
