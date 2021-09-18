@@ -7,6 +7,7 @@ class StyleAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;
   final List<Widget> actions;
   final Color backgroundColor;
+  final double? elevation;
   const StyleAppBar({
     Key? key,
     required this.height,
@@ -15,12 +16,14 @@ class StyleAppBar extends StatelessWidget implements PreferredSizeWidget {
     required this.title,
     required this.actions,
     required this.backgroundColor,
+    this.elevation,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: backgroundColor,
+      elevation: elevation,
       toolbarHeight: height,
       title: title,
       actions: actions,
