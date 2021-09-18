@@ -7,6 +7,7 @@ import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/provider/feedback_position_provider.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/tabBar.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/userCard.dart';
+import 'package:flutter_dating_cdcnpm/style/styleAppBar.dart';
 import 'package:flutter_dating_cdcnpm/theme/color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -20,17 +21,47 @@ class _HomePageState extends State<HomePage> {
   final List<User> users = dummyUsers;
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-            elevation: 0.0,
-            leading: Image.asset(
-              'assets/images/splash.png',
+        appBar: StyleAppBar(
+          backgroundColor: kBackgroudColor,
+          height: 60,
+          leading: InkWell(
+            onTap: () {},
+            child: Container(
+              margin: EdgeInsetsDirectional.only(start: 5),
+              child: ShaderMask(
+                  child: Icon(
+                    FontAwesomeIcons.heartBroken,
+                    size: 42,
+                    color: Colors.redAccent,
+                  ),
+                  blendMode: BlendMode.srcATop,
+                  shaderCallback: (bounds) {
+                    return LinearGradient(
+                            colors: [
+                          Colors.redAccent,
+                          Colors.deepPurpleAccent,
+                        ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            tileMode: TileMode.repeated)
+                        .createShader(bounds);
+                  }),
             ),
-            backgroundColor: Colors.white,
-            title: GradientText(
-              text: 'DatingApp',
-              colors: <Color>[Colors.redAccent, Colors.purpleAccent],
-              style: TextStyle(fontSize: 30.0),
-            )),
+          ),
+          title: GradientText(
+            text: 'Dating',
+            colors: <Color>[Colors.redAccent, Colors.purpleAccent],
+            style: TextStyle(fontSize: 30.0),
+          ),
+          actions: [
+            IconButton(
+                icon: Icon(Icons.notifications),
+                color: Colors.grey,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/notification');
+                })
+          ],
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -41,23 +72,10 @@ class _HomePageState extends State<HomePage> {
                     child: Stack(children: users.map(buildUser).toList()),
                   ),
             Expanded(child: Container()),
-            navigationBar()
+            // CurvedNavigationBarWidget() //tab
           ],
         ),
       );
-
-  Widget buildAppBar() => AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          Icon(Icons.chat, color: Colors.grey),
-          SizedBox(width: 16),
-        ],
-        leading: Icon(Icons.person, color: Colors.grey),
-        title: FaIcon(FontAwesomeIcons.fire, color: Colors.deepOrange),
-      );
-
   Widget buildUser(User user) {
     final userIndex = users.indexOf(user);
     final isUserInFocus = userIndex == users.length - 1;
