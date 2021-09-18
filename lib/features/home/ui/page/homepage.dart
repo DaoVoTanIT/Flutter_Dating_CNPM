@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: StyleAppBar(
           backgroundColor: kBackgroudColor,
+          elevation: 0.3,
           height: 60,
           leading: InkWell(
             onTap: () {},
