@@ -21,9 +21,10 @@ class _SignInPageState extends State<SignInPage> {
             OutlinedButton(
               //style: outlineButtonStyle,
               onPressed: () {
-                Navigator.pushNamed(context, RouteName.homePage);
+                Navigator.pushNamed(
+                    context, RouteName.curvedNavigationBarWidget);
               },
-              child: Text('Looks like an OutlineButton'),
+              child: Text(' OutlineButton'),
             )
           ],
         ),
