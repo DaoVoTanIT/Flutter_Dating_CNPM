@@ -94,7 +94,7 @@ final dummyUsers = [
     age: 30,
     bio:
         'Psychology, science, and art are what helps me to learn the outside world and myself.',
-    imgUrl: 'assets/images/user6.jp6g',
+    imgUrl: 'assets/images/user6.jpeg',
     location: 'Birmingham',
   ),
   User(
