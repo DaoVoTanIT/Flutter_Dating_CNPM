@@ -1,3 +1,4 @@
+import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
