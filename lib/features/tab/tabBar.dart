@@ -2,47 +2,10 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_dating_cdcnpm/features/chat/ui/page/chatPage.dart';
-import 'package:flutter_dating_cdcnpm/features/chat/ui/profile/ui/page/profile.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/page/homepage.dart';
+import 'package:flutter_dating_cdcnpm/features/profile/ui/page/profile.dart';
 import 'package:flutter_dating_cdcnpm/features/readInfor/ui/page/readNews.dart';
 import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
-
-// Widget navigationBar(BuildContext context) {
-//   return CurvedNavigationBarWidget(
-//     color: Colors.white,
-//     backgroundColor: Colors.transparent,
-//     buttonBackgroundColor: Colors.blueAccent,
-//     height: 50.0,
-//     items: <Widget>[
-//       IconButton(
-//         onPressed: () {},
-//         icon: Icon(Icons.home),
-//         iconSize: 25.0,
-//         color: Colors.grey,
-//       ),
-//       IconButton(
-//         onPressed: () {},
-//         icon: Icon(Icons.book),
-//         iconSize: 25.0,
-//         color: Colors.grey,
-//       ),
-//       IconButton(
-//         onPressed: () {
-//           Navigator.pushNamed(context, RouteName.chatPage);
-//         },
-//         icon: Icon(Icons.chat),
-//         iconSize: 25.0,
-//         color: Colors.grey,
-//       ),
-//       IconButton(
-//         onPressed: () {},
-//         icon: Icon(Icons.people),
-//         iconSize: 25.0,
-//         color: Colors.grey,
-//       ),
-//     ],
-//   );
-// }
 
 class CurvedNavigationBarWidget extends StatefulWidget {
   const CurvedNavigationBarWidget({Key? key}) : super(key: key);
@@ -55,7 +18,7 @@ class CurvedNavigationBarWidget extends StatefulWidget {
 class _CurvedNavigationBarWidgetState extends State {
   GlobalKey _NavKey = GlobalKey();
 
-  var PagesAll = [HomePage(), ReadNewsPage(), ChatPage(), ProfilePage()];
+  var PagesAll = [HomePage(), ChatPage(), ReadNewsPage(), ProfilePage()];
 
   var myindex = 0;
 
