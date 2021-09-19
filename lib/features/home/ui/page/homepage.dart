@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_cdcnpm/features/home/model/userInfor.dart';
 import 'package:flutter_dating_cdcnpm/features/home/resources/data.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/provider/feedback_position_provider.dart';
-import 'package:flutter_dating_cdcnpm/features/home/ui/widget/tabBar.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/widget/userCard.dart';
 import 'package:flutter_dating_cdcnpm/style/styleAppBar.dart';
 import 'package:flutter_dating_cdcnpm/theme/color.dart';
