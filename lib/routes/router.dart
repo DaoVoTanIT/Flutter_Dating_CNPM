@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_cdcnpm/features/chat/ui/page/chatPage.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/page/homepage.dart';
-import 'package:flutter_dating_cdcnpm/features/home/ui/widget/tabBar.dart';
 import 'package:flutter_dating_cdcnpm/features/signin/ui/page/signin.dart';
 import 'package:flutter_dating_cdcnpm/features/splash/ui/page/splash.dart';
+import 'package:flutter_dating_cdcnpm/features/tab/tabBar.dart';
 
 class Routers {
   static Route generateRoute(RouteSettings settings) {
