@@ -44,7 +44,7 @@ class _CurvedNavigationBarWidgetState extends State {
           });
         },
         animationCurve: Curves.fastLinearToSlowEaseIn,
-        color: Colors.orange,
+        color: Colors.red,
       ),
       body: PagesAll[myindex],
     );
