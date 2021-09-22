@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_dating_cdcnpm/features/chat/ui/page/chatPage.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/page/homepage.dart';
+import 'package:flutter_dating_cdcnpm/features/map/ui/page/map.dart';
 import 'package:flutter_dating_cdcnpm/features/profile/ui/page/profile.dart';
 import 'package:flutter_dating_cdcnpm/features/readInfor/ui/page/readNews.dart';
 import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
@@ -18,7 +19,13 @@ class CurvedNavigationBarWidget extends StatefulWidget {
 class _CurvedNavigationBarWidgetState extends State {
   GlobalKey _NavKey = GlobalKey();
 
-  var PagesAll = [HomePage(), ChatPage(), ReadNewsPage(), ProfilePage()];
+  var PagesAll = [
+    HomePage(),
+    MapPage(),
+    ChatPage(),
+    ReadNewsPage(),
+    ProfilePage()
+  ];
 
   var myindex = 0;
 
@@ -31,9 +38,10 @@ class _CurvedNavigationBarWidgetState extends State {
         key: _NavKey,
         items: [
           Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
-          Icon((myindex == 1) ? Icons.message : Icons.message_outlined),
-          Icon((myindex == 2) ? Icons.favorite_border : Icons.favorite),
-          Icon((myindex == 3)
+          Icon((myindex == 1) ? Icons.map : Icons.map_outlined),
+          Icon((myindex == 2) ? Icons.message : Icons.message_outlined),
+          Icon((myindex == 3) ? Icons.favorite_border : Icons.favorite),
+          Icon((myindex == 4)
               ? Icons.perm_identity
               : Icons.perm_contact_cal_rounded)
         ],
