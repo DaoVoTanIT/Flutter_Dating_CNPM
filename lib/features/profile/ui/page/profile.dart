@@ -1,9 +1,11 @@
 import 'package:easy_gradient_text/easy_gradient_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dating_cdcnpm/features/home/model/userInfor.dart';
+import 'package:flutter_dating_cdcnpm/features/profile/ui/widget/updateInfor.dart';
 import 'package:flutter_dating_cdcnpm/routes/route_name.dart';
 import 'package:flutter_dating_cdcnpm/routes/router.dart';
 import 'package:flutter_dating_cdcnpm/style/styleAppBar.dart';
+import 'package:flutter_dating_cdcnpm/style/theme_helper.dart';
 import 'package:flutter_dating_cdcnpm/theme/color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -72,7 +74,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage("assets/images/profile.jpeg"),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.fill)),
                       child: Stack(
                         children: <Widget>[
                           SafeArea(
@@ -113,65 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.end,
                                       mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text("2K",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 16.0,
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                            Text("Friends",
-                                                style: TextStyle(
-                                                    color: Colors.white
-                                                        .withOpacity(0.8),
-                                                    fontSize: 12.0))
-                                          ],
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text("26",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 16.0,
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                            Text("Comments",
-                                                style: TextStyle(
-                                                    color: Colors.white
-                                                        .withOpacity(0.8),
-                                                    fontSize: 12.0))
-                                          ],
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text("48",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 16.0,
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                            Text("Bookmarks",
-                                                style: TextStyle(
-                                                    color: Colors.white
-                                                        .withOpacity(0.8),
-                                                    fontSize: 12.0))
-                                          ],
-                                        )
-                                      ],
+                                      children: [],
                                     ),
                                   ),
                                 ],
@@ -185,27 +129,36 @@ class _ProfilePageState extends State<ProfilePage> {
                   flex: 1,
                   child: Container(
                       child: SingleChildScrollView(
-                          child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 32.0, right: 32.0, top: 42.0),
-                    child: Column(children: [
-                      Text("About me",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 17.0)),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 24.0, right: 24, top: 30, bottom: 24),
-                        child: Text(
-                            "Ta nhận được không phải điều mà ta lười biếng ước ao, mà là điều ta dành được một cách chính đáng. Phần thưởng của ta luôn tỷ lệ thuận với nỗ lực ta bỏ ra. – Earl Nightingale",
-                            textAlign: TextAlign.justify,
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 17)),
+                          child: Column(children: [
+                    Text("About me",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 17.0)),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 24.0, right: 24, top: 30, bottom: 24),
+                      child: Text(
+                          "Ta nhận được không phải điều mà ta lười biếng ước ao, mà là điều ta dành được một cách chính đáng. Phần thưởng của ta luôn tỷ lệ thuận với nỗ lực ta bỏ ra. – Earl NightingaleNN,",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(color: Colors.black, fontSize: 17)),
+                    ),
+                    RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.redAccent,
+                      onPressed: () {
+                        updateInfor(context);
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32.0),
                       ),
-                      // PhotoAlbum(imgArray: imgArray)
-                    ]),
-                  ))),
+                      child: Padding(
+                          padding: EdgeInsets.only(
+                              left: 12.0, right: 12.0, top: 10, bottom: 10),
+                          child: Text("Cập nhật thông tin",
+                              style: TextStyle(fontSize: 13.0))),
+                    ),
+                  ]))),
                 ),
               ],
             ),
