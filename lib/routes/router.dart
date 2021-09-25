@@ -3,6 +3,7 @@ import 'package:flutter_dating_cdcnpm/features/chat/ui/page/chatPage.dart';
 import 'package:flutter_dating_cdcnpm/features/home/ui/page/homepage.dart';
 import 'package:flutter_dating_cdcnpm/features/profile/ui/page/setting.dart';
 import 'package:flutter_dating_cdcnpm/features/signin/ui/page/signin.dart';
+import 'package:flutter_dating_cdcnpm/features/signin/ui/page/signup.dart';
 import 'package:flutter_dating_cdcnpm/features/splash/ui/page/splash.dart';
 import 'package:flutter_dating_cdcnpm/features/tab/tabBar.dart';
 
@@ -13,6 +14,8 @@ class Routers {
         return MaterialPageRoute(builder: (context) => SplashPage());
       case 'LoginPage':
         return MaterialPageRoute(builder: (context) => SignInPage());
+      case 'RegistrationPage':
+        return MaterialPageRoute(builder: (context) => RegistrationPage());
       case 'CurvedNavigationBarWidget':
         return MaterialPageRoute(
             builder: (context) => CurvedNavigationBarWidget());
