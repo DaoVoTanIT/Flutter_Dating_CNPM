@@ -36,7 +36,7 @@ dependencies:
   location: ^4.3.0
   hexcolor: ^2.0.4
   url_launcher: ^6.0.4
-  web_scraper: ^0.1.4
+  webview_flutter: ^2.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
