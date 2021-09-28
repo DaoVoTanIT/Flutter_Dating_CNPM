@@ -79,7 +79,6 @@ class _HomePageState extends State<HomePage> {
   Widget buildUser(User user) {
     final userIndex = users.indexOf(user);
     final isUserInFocus = userIndex == users.length - 1;
-
     return Listener(
       onPointerMove: (pointerEvent) {
         final provider =
