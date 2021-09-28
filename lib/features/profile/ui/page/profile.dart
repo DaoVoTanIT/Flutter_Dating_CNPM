@@ -125,16 +125,20 @@ class _ProfilePageState extends State<ProfilePage> {
                         ],
                       )),
                 ),
+                //SizedBox(height: 25),
                 Flexible(
                   flex: 1,
                   child: Container(
                       child: SingleChildScrollView(
                           child: Column(children: [
-                    Text("About me",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 17.0)),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 25),
+                      child: Text("About me",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17.0)),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(
                           left: 24.0, right: 24, top: 30, bottom: 24),
