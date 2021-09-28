@@ -73,8 +73,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/images/profile.jpeg"),
-                              fit: BoxFit.fill)),
+                        image: AssetImage("assets/images/profile.jpeg"),
+                      )),
                       child: Stack(
                         children: <Widget>[
                           SafeArea(
