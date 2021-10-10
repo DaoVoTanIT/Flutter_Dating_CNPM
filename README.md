@@ -1,6 +1,7 @@
 # Xây dựng UI Dating Môn Chuyên đề CNPM
 
 A new Flutter project.
+![image](https://user-images.githubusercontent.com/67967917/136682558-ad3b2a5b-21ce-43c9-9909-15e9b9adb431.png)
 
 ## Getting Started
 
